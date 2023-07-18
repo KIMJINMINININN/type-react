@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRecoilState } from 'recoil';
-import { counterState } from '../state/store';
+import { counterState } from '../recoil/store';
 
 const Counter = () => {
     const [counter, setCounter] = useRecoilState(counterState);

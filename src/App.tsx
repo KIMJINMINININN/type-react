@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TodoList from './component/TodoList'
 
 import {
     RecoilRoot,
@@ -9,17 +10,18 @@ import {
     useRecoilValue,
 } from 'recoil';
 import Counter from "./component/Counter";
-import { counterState, counterLabelSelector } from './state/store';
+import { counterState, counterLabelSelector } from './recoil/store';
 
 const App = () => {
-    const counter = useRecoilValue(counterState);
-    const counterLabel = useRecoilValue(counterLabelSelector);
+    const counter:number = useRecoilValue(counterState);
+    const counterLabel:string = useRecoilValue(counterLabelSelector);
 
     return (
         <>
-            <Counter />
-            <div>counter : {counter}</div>
-            <div>counterLabel : {counterLabel}</div>
+            <TodoList />
+            {/*<Counter />*/}
+            {/*<div>counter : {counter}</div>*/}
+            {/*<div>counterLabel : {counterLabel}</div>*/}
         </>
     );
 };
