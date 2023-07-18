@@ -14,6 +14,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist/'),
         publicPath: '/',
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+    },
     module: {
         rules: [
             // Webpack(웹팩)에서 Typescript(타입스크립트)를 사용하기 위해 js|jsx를 ts|tsx로 수정 후 ts-loader를 추가

@@ -16,11 +16,15 @@ const App = () => {
     const counterLabel = useRecoilValue(counterLabelSelector);
 
     return (
-        <RecoilRoot>
+        <>
             <Counter />
             <div>counter : {counter}</div>
             <div>counterLabel : {counterLabel}</div>
-        </RecoilRoot>
+        </>
     );
 };
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+    <RecoilRoot>
+        <App />
+    </RecoilRoot>
+    , document.getElementById('app'));
